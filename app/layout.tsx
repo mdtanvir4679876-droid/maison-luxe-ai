@@ -3,10 +3,10 @@ import './globals.css';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <ClerkProvider afterSignOutUrl="/">
+    <ClerkProvider>
       <html lang="en">
         <body>
-          <header className="flex justify-end p-4">
+          <header style={{ padding: '20px', display: 'flex', justifyContent: 'flex-end' }}>
             <SignedOut>
               <SignInButton />
               <SignUpButton />
@@ -19,5 +19,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </body>
       </html>
     </ClerkProvider>
-  );
+  )
 }
